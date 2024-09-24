@@ -12,23 +12,26 @@ Features
 
 Technologies
 
-Java: 17,
-Spring Boot: 3.3.4,
-Maven,
-Database: H2,
-Lombok,
-Swagger for API documentation,
-Spring Data JPA,
-Junit5, Mockito
+* Java: 17
+* Spring Boot: 3.3.4
+* Maven
+* Database: H2
+* Lombok
+* Swagger for API documentation
+* Spring Data JPA
+* Junit5, Mockito
 
 Getting Started
 
 1. Clone the Repository :
-   git clone https://github.com/Dhanushma/core-bank.git
+   `git clone https://github.com/Dhanushma/core-bank.git`
 
 2. Build the application :
-   mvn clean install
+  ` mvn clean install`
 
 3. Run the application :
-   mvn spring-boot:run or java -jar target/core-bank-0.0.1-SNAPSHOT.jar
+   `mvn spring-boot:run ` or 
+
+   `java -jar target/core-bank-0.0.1-SNAPSHOT.jar`
+
 4. Access the APIs - http://localhost:8082/swagger-ui.html 
