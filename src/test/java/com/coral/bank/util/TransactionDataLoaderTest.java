@@ -32,9 +32,9 @@ public class TransactionDataLoaderTest {
     public void testRun_ShouldLoadTransactionData() throws Exception {
         String accountNumber = "1234567890";
         LocalDate startDate = LocalDate.of(2024, 1, 1);
-        LocalDate endDate = LocalDate.of(2024, 2, 1);
+        LocalDate endDate = LocalDate.now();
 
         transactionDataLoader.run();
-        Mockito.verify(transactionRepository, Mockito.times(100)).save(Mockito.any(Transaction.class));
+        Mockito.verify(transactionRepository, Mockito.times(1000)).save(Mockito.any(Transaction.class));
     }
 }

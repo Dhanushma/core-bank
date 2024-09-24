@@ -51,7 +51,7 @@ public class TransactionControllerTest {
         Mockito.when(transactionService.getTransactionsByAccountNumberAndDateRange(Mockito.anyString(), Mockito.any(LocalDate.class), Mockito.any(LocalDate.class), Mockito.anyInt(), Mockito.anyInt()))
                 .thenReturn(responseDTO);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/transactions")
+        mockMvc.perform(MockMvcRequestBuilders.get("/core-bank/api/transactions")
                         .param("accountNumber", ACC_NUM)
                         .param("fromDate", FROM_DATE.toString())
                         .param("toDate", TO_DATE.toString())
@@ -71,7 +71,7 @@ public class TransactionControllerTest {
         Mockito.when(transactionService.getTransactionsByAccountNumberAndDateRange(Mockito.anyString(), Mockito.any(LocalDate.class), Mockito.any(LocalDate.class), Mockito.anyInt(), Mockito.anyInt()))
                 .thenReturn(responseDTO);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/transactions")
+        mockMvc.perform(MockMvcRequestBuilders.get("/core-bank/api/transactions")
                         .param("accountNumber", ACC_NUM)
                         .param("fromDate", FROM_DATE.toString())
                         .param("toDate", TO_DATE.toString())
@@ -85,7 +85,7 @@ public class TransactionControllerTest {
     @Test
     public void testGetPaginatedTransactionsInvalidDate() throws Exception {
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/transactions")
+        mockMvc.perform(MockMvcRequestBuilders.get("/core-bank/api/transactions")
                         .param("accountNumber", ACC_NUM)
                         .param("fromDate", "invalid-date")
                         .param("toDate", "another-invalid-date")
@@ -104,7 +104,7 @@ public class TransactionControllerTest {
         Mockito.when(transactionService.getTransactionsByAccountNumberAndDateRange(Mockito.anyString(), Mockito.any(LocalDate.class), Mockito.any(LocalDate.class), Mockito.anyInt(), Mockito.anyInt()))
                 .thenReturn(responseDTO);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/transactions")
+        mockMvc.perform(MockMvcRequestBuilders.get("/core-bank/api/transactions")
                         .param("accountNumber", ACC_NUM)
                         .param("fromDate", fromDate.toString())
                         .param("toDate", toDate.toString()))

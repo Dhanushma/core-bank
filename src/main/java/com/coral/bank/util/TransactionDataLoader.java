@@ -27,9 +27,9 @@ public class TransactionDataLoader implements CommandLineRunner {
         log.info("Loading Transaction Data");
         String accountNumber = "1234567890";
         LocalDate startDate = LocalDate.of(2024, 1, 1);
-        LocalDate endDate = LocalDate.of(2024, 2, 1);
+        LocalDate endDate = LocalDate.now();
         Random random = new Random();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             BigDecimal transactionAmount = BigDecimal.valueOf(random.nextDouble() * 1000) // Random amount between 0 and 1000
                     .setScale(2, RoundingMode.HALF_UP); // Set scale for decimal precision
 
